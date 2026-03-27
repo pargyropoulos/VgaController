@@ -1,0 +1,9 @@
+# MPLAB X build files
+.ca/build/
+build/
+disassembly/
+debug/
+dist/
+*.i
+*.p1
+*.p1.d

@@ -1,0 +1,8 @@
+# Include C and header files in language stats
+*.c linguist-language=C
+*.h linguist-language=C
+
+# Exclude all other files from language stats
+* linguist-generated=true
+*.c linguist-generated=false
+*.h linguist-generated=false

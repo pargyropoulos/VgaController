@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/PICProjects/VgaController/core/interpreter/state_cmd_text.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/interpreter/state_params.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/interpreter/state_params.h</file>
+            <file>file:/C:/PICProjects/VgaController/core/video_terminal/image_1.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/video_terminal/image_2.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/video_terminal/glyphs.c</file>
+            <file>file:/C:/PICProjects/VgaController/isr/plot_generator.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/video_terminal/images.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/interpreter/terminal_message.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/video_terminal/video_terminal.c</file>
+            <file>file:/C:/PICProjects/VgaController/isr/text_generator.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/video_terminal/image_3.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/event_handlers/event_handler_initiate_dma_transfer.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/video_terminal/image_4.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/video_terminal/image_1.h</file>
+            <file>file:/C:/PICProjects/VgaController/isr/pixel_generator.c</file>
+        </group>
+    </open-files>
+</project-private>
