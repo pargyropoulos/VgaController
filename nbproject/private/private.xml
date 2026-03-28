@@ -3,22 +3,57 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/PICProjects/VgaController/core/interpreter/state_cmd_text.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/video_terminal/image_2.c</file>
+            <file>file:/C:/PICProjects/VgaController/isr/image_generator.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/interpreter/state_cmd_plot.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/video_terminal/glyphs.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/interpreter/state_cmd_plot.h</file>
+            <file>file:/C:/PICProjects/VgaController/isr/image_generator.h</file>
+            <file>file:/C:/PICProjects/VgaController/core/video_terminal/glyphs.h</file>
+            <file>file:/C:/PICProjects/VgaController/core/event_handlers/event_handlers.h</file>
+            <file>file:/C:/PICProjects/VgaController/core/video_terminal/image_2.h</file>
+            <file>file:/C:/PICProjects/VgaController/middlewares/reactor.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/video_terminal/image_4.h</file>
+            <file>file:/C:/PICProjects/VgaController/middlewares/circular_buffer.c</file>
+            <file>file:/C:/PICProjects/VgaController/middlewares/circular_buffer.h</file>
+            <file>file:/C:/PICProjects/VgaController/core/interpreter/state_cmd_gfx.c</file>
+            <file>file:/C:/PICProjects/VgaController/isr/plot_generator.h</file>
+            <file>file:/C:/PICProjects/VgaController/middlewares/middleware.h</file>
+            <file>file:/C:/PICProjects/VgaController/middlewares/button_api.c</file>
+            <file>file:/C:/PICProjects/VgaController/middlewares/button_api.h</file>
+            <file>file:/C:/PICProjects/VgaController/core/event_handlers/event_hanlder_button.c</file>
+            <file>file:/C:/PICProjects/VgaController/isr/plot_generator.c</file>
+            <file>file:/C:/PICProjects/VgaController/middlewares/dma_api_internal.h</file>
+            <file>file:/C:/PICProjects/VgaController/core/interpreter/interpreter.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/video_terminal/video_terminal.c</file>
+            <file>file:/C:/PICProjects/VgaController/middlewares/dma_api.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/video_terminal/video_terminal.h</file>
+            <file>file:/C:/PICProjects/VgaController/core/event_handlers/event_handler_initiate_dma_transfer.c</file>
+            <file>file:/C:/PICProjects/VgaController/middlewares/dma_api.h</file>
+            <file>file:/C:/PICProjects/VgaController/core/interpreter/state_cmd_gfx.h</file>
             <file>file:/C:/PICProjects/VgaController/core/interpreter/state_params.c</file>
             <file>file:/C:/PICProjects/VgaController/core/interpreter/state_params.h</file>
             <file>file:/C:/PICProjects/VgaController/core/video_terminal/image_1.c</file>
-            <file>file:/C:/PICProjects/VgaController/core/video_terminal/image_2.c</file>
-            <file>file:/C:/PICProjects/VgaController/core/video_terminal/glyphs.c</file>
-            <file>file:/C:/PICProjects/VgaController/isr/plot_generator.c</file>
-            <file>file:/C:/PICProjects/VgaController/core/video_terminal/images.c</file>
-            <file>file:/C:/PICProjects/VgaController/core/interpreter/terminal_message.c</file>
-            <file>file:/C:/PICProjects/VgaController/core/video_terminal/video_terminal.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/interpreter/interpreter.h</file>
             <file>file:/C:/PICProjects/VgaController/isr/text_generator.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/interpreter/state.h</file>
+            <file>file:/C:/PICProjects/VgaController/isr/text_generator.h</file>
+            <file>file:/C:/PICProjects/VgaController/isr/pixel_generator.h</file>
             <file>file:/C:/PICProjects/VgaController/core/video_terminal/image_3.c</file>
-            <file>file:/C:/PICProjects/VgaController/core/event_handlers/event_handler_initiate_dma_transfer.c</file>
-            <file>file:/C:/PICProjects/VgaController/core/video_terminal/image_4.c</file>
             <file>file:/C:/PICProjects/VgaController/core/video_terminal/image_1.h</file>
             <file>file:/C:/PICProjects/VgaController/isr/pixel_generator.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/video_terminal/image_3.h</file>
+            <file>file:/C:/PICProjects/VgaController/core/interpreter/state_cmd_text.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/interpreter/state_idle.h</file>
+            <file>file:/C:/PICProjects/VgaController/core/event_handlers/event_handler_uart_overrun.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/interpreter/state_cmd_text.h</file>
+            <file>file:/C:/PICProjects/VgaController/core/event_handlers/event_handler_update_input_buffer.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/interpreter/state_idle.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/interpreter/terminal_message.c</file>
+            <file>file:/C:/PICProjects/VgaController/isr/isr.c</file>
+            <file>file:/C:/PICProjects/VgaController/core/interpreter/terminal_message.h</file>
+            <file>file:/C:/PICProjects/VgaController/core/event_handlers/event_handler_process_input.c</file>
+            <file>file:/C:/PICProjects/VgaController/main.c</file>
         </group>
     </open-files>
 </project-private>
