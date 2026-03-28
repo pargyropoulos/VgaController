@@ -258,7 +258,7 @@ The color information, already quantized into 4 bits, is mapped to **16 discrete
 The Software Architecture of the VGA controller is based on a layered model, which separates the low-level hardware management from the high-level application logic. This design approach enhances modularity, maintainability, and scalability of the codebase.
 
 <div align="center">
-  <img src="./docs/pics/system_architecture.svg" alt="System Architecture" style="max-width: 125%; min-width: 75%;" />
+  <img src="./docs/pics/software_architecture.svg" alt="Software Architecture" style="max-width: 125%; min-width: 75%;" />
   <p><em>Software Architecture</em></p>
 </div>
 
