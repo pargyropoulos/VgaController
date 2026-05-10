@@ -4,10 +4,10 @@ A VGA controller built around an 8‑bit PIC18F47K42, capable of generating 16 c
 
 <p align="center">
   <a href="https://www.youtube.com/watch?v=Uq0Z-Li6JEw">
-    <img src="https://img.youtube.com/vi/Uq0Z-Li6JEw/0.jpg" alt="Demo Video 1">
+    <img src="https://img.youtube.com/vi/Uq0Z-Li6JEw/0.jpg" width="300" alt="Demo Video 1">
   </a>
   <a href="https://www.youtube.com/watch?v=OKflPnqpWgs">
-    <img src="https://img.youtube.com/vi/OKflPnqpWgs/0.jpg" alt="Demo Video 2">
+    <img src="https://img.youtube.com/vi/OKflPnqpWgs/0.jpg" width="300" alt="Demo Video 2">
   </a>
 </p>
 
@@ -40,9 +40,11 @@ Proper timing ensures the stable and reliable display of the image on the screen
 
 <p><em>HSYNC timings</em></p>
 
-
+<p>
 <img src="./docs/pics/hsync.svg" width = "100%" alt="HSYNC signal" />
-<p><em>HSYNC signal</em></p>
+<em>HSYNC signal</em></p>
+
+<br><br>
 
 | Frame Part    | Lines Count | Duration (ms) |
 | :------------ | :----------: | ------------: |
@@ -520,23 +522,32 @@ Since developing such software would require significant time, the original appr
 To illustrate the compression process, the following example shows the result of converting a 16‑color image with 4‑bit depth per pixel into a 16‑color image with 4‑bit depth per **8 × 8** cell.
 
 <p align="center">
-  <img src="./docs/pics/schreck1.png" alt="Original 16-color picture" style="max-width: 45%;">
+  <img src="./docs/pics/schreck1.png" alt="Original 16-color picture">
   <br>
   <em>Original 16‑color picture</em>
 </p>
 
 <p align="center">
-  <img src="./docs/pics/schreck2.png" alt="Compressed 16-color picture" style="max-width: 45%;">
+  <img src="./docs/pics/schreck2.png" alt="Compressed 16-color picture">
   <br>
   <em>Compressed 16‑color picture</em>
 </p>
 
-<p align="center">
-  <img src="./docs/pics/schreck_bit.png" alt="1-bit image data" style="max-width: 50%;">
-  <img src="./docs/pics/schreck_color.png" alt="Color information" style="max-width: 50%;">
-  <br>
-  <em>Image Data with 1‑bit Depth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Color Information</em>
-</p>
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="./docs/pics/schreck_bit.png" width="250" height="300"><br>
+      <sub>1-bit Image Data</sub>
+    </td>
+    <td align="center">
+      <img src="./docs/pics/schreck_color.png" width="250" height="300"><br>
+      <sub>Color Information</sub>
+    </td>
+  </tr>
+</table>
+
+
 
 The original image was processed using the [Image Spectrumizer](https://github.com/jarikomppa/img2spec),  a free software tool by Jari Komppa.
 
@@ -640,14 +651,24 @@ Assembly was mandatory because the equivalent C implementation consumed signific
 
 The above procedure, however, conceals a fundamental problem that arose during signal generation. Because instructions are executed sequentially, the selection signal reached the multiplexers two cycles earlier than the color information. This caused **incorrect rendering**, visible as **color bleeding**.
 
-
 <div align="center">
+  <table>
+    <tr>
+      <td style="border:2px solid black; padding:8px;">
+        <img src="./docs/pics/color_bleeding.png" alt="color_bleeding">
+      </td>
+    </tr>
+  </table>
+  <em>Color Bleeding effect</em>
+</div>
+
+<!-- <div align="center">
   <div style="border: 2px solid #000000; padding: 8px; display: inline-block;">
     <img src="./docs/pics/color_bleeding.png" alt="color_bleeding">
   </div>
   <br>
   <em>Color Bleeding effect</em>
-</div>
+</div> -->
 
 <br>
 
@@ -657,12 +678,23 @@ Before the start of the process, the PISO (SPI) register is preloaded with data 
 In this way, both the selection signal and the color information arrive at the multiplexers simultaneously, and the above phenomenon is eliminated.        
 
 <div align="center">
+  <table>
+    <tr>
+      <td style="border:2px solid black; padding:8px;">
+        <img src="./docs/pics/no_color_bleeding.png" alt="no_color_bleeding">
+      </td>
+    </tr>
+  </table>
+  <em>Free from Color Bleeding effect</em>
+</div>
+
+<!-- <div align="center">
   <div style="border: 2px solid #000000; padding: 8px; display: inline-block;">
     <img src="./docs/pics/no_color_bleeding.png" alt="no_color_bleeding">
   </div>
   <br>
   <em>Free from Color Bleeding effect</em>
-</div>
+</div> -->
 
 <br>
 <br>
