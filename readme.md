@@ -42,7 +42,7 @@ Proper timing ensures the stable and reliable display of the image on the screen
 
 
 <img src="./docs/pics/hsync.svg" width = "100%" alt="HSYNC signal" />
-
+<p><em>HSYNC signal</em></p>
 
 | Frame Part    | Lines Count | Duration (ms) |
 | :------------ | :----------: | ------------: |
