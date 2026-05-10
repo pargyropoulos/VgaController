@@ -30,8 +30,8 @@ typedef struct {
 void REACTOR_Register_event_handler(const event_handler_t *handler);
 void REACTOR_Unregister_event_handler(const event_handler_t *handler);
 extern __near volatile uint8_t g_event_flags;
-#define RAISE_EVENT(event_id)   do {g_event_flags |= (event_t)event_id;} while (0)
-#define CLEAR_EVENT(event_id)   do {g_event_flags &= ~(1 << event_id);} while (0)
+#define RAISE_EVENT(event_id)   do {g_event_flags |= event_id;} while (0)
+#define CLEAR_EVENT(event_id)   do {g_event_flags &= ~event_id;} while (0)
 #define testbit(var, bit) ((var) & (1 <<(bit)))
 #define setbit(var, bit) ((var) |= (1 << (bit)))
 #define clrbit(var, bit) ((var) &= ~(1 << (bit)))
