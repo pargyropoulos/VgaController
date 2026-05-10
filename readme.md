@@ -1,8 +1,15 @@
 # Serial VGA Controller
 A VGA controller built around an 8‑bit PIC18F47K42, capable of generating 16 colors at an impressive 360×480 resolution, while using minimal external components. It is controlled through a UART interface, accepts ANSI‑style escape sequences and supports multiple screen modes.
 
-You can watch a short [Demo Video](https://www.youtube.com/watch?v=Uq0Z-Li6JEw) showcasing the controller in action.
 
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=Uq0Z-Li6JEw">
+    <img src="https://img.youtube.com/vi/Uq0Z-Li6JEw/0.jpg" alt="Demo Video 1">
+  </a>
+  <a href="https://www.youtube.com/watch?v=OKflPnqpWgs">
+    <img src="https://img.youtube.com/vi/OKflPnqpWgs/0.jpg" alt="Demo Video 2">
+  </a>
+</p>
 
 ## The VGA History
 The VGA standard and its corresponding controller were developed by IBM in 1987 and within the following three years it dominated the market of IBM-compatible computers. It supported a resolution of 640x480 with 16 colors and used a 15-pin input interface.
@@ -35,7 +42,6 @@ Proper timing ensures the stable and reliable display of the image on the screen
 
 
 <img src="./docs/pics/hsync.svg" width = "100%" alt="HSYNC signal" />
-
 
 
 | Frame Part    | Lines Count | Duration (ms) |
@@ -203,15 +209,19 @@ The intersection of this interval with the corresponding interval of the vertica
 </div>
 
 <div align="center">
-  <img src="./docs/pics/visible_signal_pwm.svg" alt="visible signal pwm" style="max-width:75%; min-width:10%;" />
-  <p><em>Visible Area Signal – PWM intersection</em></p>
+  <img src="./docs/pics/visible_signal_pwm.svg"
+      width="100%"
+      alt="Visible Area Signal – PWM intersection"
+  />
+<p><em>Visible Area Signal – PWM intersection</em></p>
 </div>
+
 
 The VSYNC, HSYNC, and Visible Area signals collectively define the complete VGA frame.  
 Pixel data is transmitted to the VGA interface **only during the intersection** of the H Active Area and V Active Area.
 
 <div align="center">
-  <img src="./docs/pics/full_vga_frame.svg" alt="full vga frame" style="width:80%;" />
+  <img src="./docs/pics/full_vga_frame.svg" alt="full vga frame" style="width:100%;" />
   <p><em>Full VGA Frame</em></p>
 </div>
 
@@ -232,6 +242,7 @@ All brightness multiplexers are interconnected so that the intensity selection a
 Although a single brightness multiplexer could theoretically drive all channels, practical considerations prevent this.  
 The widely available 74HC257 / 74AHC257 multiplexers allow **12–35 mA** per pin, and their output voltage varies with load.  
 To ensure stable DAC output and manufacturer‑independent behavior, **one multiplexer per color channel** is used.
+
 
 <div align="center">
   <img src="./docs/pics/mux_dac.svg" alt="mux and dac" />
@@ -317,23 +328,25 @@ The terminal and non-terminal symbols, along with the production rules of the la
 
 <parameters seq> ::= <parameter> <parameter tail>
 
-<parameters tail> ::= <parameter delimiter> <parameters seq> | <parameter end>
+<parameters tail> ::= <parameter delimiter> <parameters seq> |
+                      <parameter end>
 
 <parameter> ::= <digit> <parameter> | <digit>
 
-<digit> ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+<digit> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
 
-<parameter delimiter> ::= ,
+<parameter delimiter> ::= ","
 
-<parameter end> ::= 0x0d | ;
+<parameter end> ::= 0x0d | ";" 
 
 <esc> ::= 0x1b
 
-<alpha> ::= a | b | c | d | e | f | g | h | i | j | k | l | m | n | o | p | q | r | s | t | u | v | w | x | y | z
-           | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z
+<alpha> ::=     "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" |
+                "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" |
+                "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | 
+                "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z"     
 
-<character> ::= <digit> | <alpha>
-  
+<character> ::= <digit> | <alpha>                      
 ```
 
 From the above set of grammar rules, three groups of commands are formed, each corresponding
